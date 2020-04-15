@@ -70,4 +70,10 @@ public class PedidoServiceImpl implements PedidoService {
 
 	}
 
+	@Override
+	public Optional<PedidoEntity> obterPedidoCompleto(Integer id) {
+		// TODO Auto-generated method stub
+		return pedidoRepository.findById(id);
+	}
+
 }

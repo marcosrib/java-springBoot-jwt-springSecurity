@@ -3,6 +3,7 @@ package com.studo.jwtsecurity.domain.entity;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,8 +17,8 @@ public class ClienteEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String nome;
-	@OneToMany(mappedBy = "cliente")
-	private Set<PedidoEntity> pedidos;
+	//@OneToMany(mappedBy = "cliente" , fetch = FetchType.LAZY)
+	//private Set<PedidoEntity> pedidos;
 
 	public Integer getId() {
 		return id;
@@ -35,12 +36,12 @@ public class ClienteEntity {
 		this.nome = nome;
 	}
 
-	public Set<PedidoEntity> getPedidos() {
+	/*public Set<PedidoEntity> getPedidos() {
 		return pedidos;
 	}
 
 	public void setPedidos(Set<PedidoEntity> pedidos) {
 		this.pedidos = pedidos;
-	}
+	}*/
 
 }

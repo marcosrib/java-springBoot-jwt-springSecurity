@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,8 +32,9 @@ public class PedidoEntity {
 
 	@Column(name = "total", scale= 2, precision = 20)
 	private BigDecimal total;
-    @OneToMany(mappedBy = "pedido")
+    @OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY)
 	private List<ItemPedidoEntity> itens;
+    
 	public Integer getId() {
 		return id;
 	}
