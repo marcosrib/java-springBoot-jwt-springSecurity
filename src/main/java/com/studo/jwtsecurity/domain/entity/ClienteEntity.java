@@ -17,8 +17,8 @@ public class ClienteEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String nome;
-	//@OneToMany(mappedBy = "cliente" , fetch = FetchType.LAZY)
-	//private Set<PedidoEntity> pedidos;
+	@OneToMany(mappedBy = "cliente" , fetch = FetchType.LAZY)
+	private Set<PedidoEntity> pedidos;
 
 	public Integer getId() {
 		return id;

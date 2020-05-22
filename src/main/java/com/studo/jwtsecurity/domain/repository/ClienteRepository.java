@@ -6,4 +6,6 @@ import com.studo.jwtsecurity.domain.entity.ClienteEntity;
 
 public interface ClienteRepository extends JpaRepository<ClienteEntity, Integer> {
 
+	
+	
 }
