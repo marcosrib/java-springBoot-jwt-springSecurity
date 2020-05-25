@@ -1,4 +1,4 @@
-package com.studo.jwtsecurity;
+package com.studo.jwtsecurity.security.jwt;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
